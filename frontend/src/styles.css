@@ -1,0 +1,177 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.sidebar {
+  background: #111827;
+  color: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.sidebar p {
+  color: #cbd5e1;
+  margin: 0 0 8px;
+}
+
+.nav-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-align: left;
+  background: #1f2937;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-btn.active {
+  background: #2563eb;
+}
+
+.tip-box {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #1e3a8a;
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.content {
+  padding: 24px;
+}
+
+.panel {
+  display: grid;
+  gap: 16px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+}
+
+.panel-header h2 {
+  margin: 0 0 6px;
+}
+
+.panel-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 16px;
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+}
+
+.form input, .form select, .form textarea, .history-controls select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+.form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.primary-btn, .secondary-btn, .tiny-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #16a34a;
+  color: white;
+}
+
+.secondary-btn {
+  background: #e5e7eb;
+}
+
+.tiny-btn {
+  background: #dbeafe;
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.tiny-btn.danger {
+  background: #fee2e2;
+}
+
+.row-actions, .actions, .history-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 14px;
+}
+
+.message {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+
+@media (max-width: 980px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+}
